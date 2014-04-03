@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+body{
+	text-align: center;
+}
+
+#hint {
+	display: none;
+}
+
+#hint:target {
+	display: block;
+}

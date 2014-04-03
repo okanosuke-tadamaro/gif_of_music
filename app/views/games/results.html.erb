@@ -1,2 +1,9 @@
-<h3>The song was <%= @title %>, by <%= @song.artist %></h3>
-<h1><%= @result %></h1>
+<h3>The song was <%= @title.capitalize %>, by <%= @song.artist %></h3>
+<% if @result %>
+<img src="http://rack.2.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2ZkL25hcG9sZW9uZHluLjBiMTFlLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/8767246f/d7a/napoleon-dynamite.jpg" alt="">
+	<h1>You win!!!</h1>
+<% else %>
+	<img src="http://livedoor.4.blogimg.jp/chihhylove/imgs/4/f/4fcd9891.gif" alt="">
+	<h1>You Lose!!!!!</h1>
+<% end %>
+<%= link_to "Play again", "/games/gifs" %>
