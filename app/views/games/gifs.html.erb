@@ -1,0 +1,14 @@
+<% @gif_array.each do |gif| %>
+
+<img src="<%= gif.image_url %>" alt="">
+
+
+<% end %>
+
+<form action="/games/results" method="get">
+	<label for="answer">Guess the song!
+		<input type="text" name="answer">
+	</label>
+<input type="hidden" name="song_id" value="<%= @song_id %>">
+<input type="submit" name="submit">
+</form>

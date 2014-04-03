@@ -13,6 +13,26 @@ class GamesController < ApplicationController
   end
 
   def gifs
+  	song = Song.all.sample
+  	title_array = Gif.get_keywords(song.title)
+  	@gif_array = []
+  	title_array.each do |w|
+  		gif = Gif.where(keyword: w).sample
+  		@gif_array << gif
+  	end
+  	@song_id = song.id
+
+  end
+
+  def results
+  	@answer = params[:answer].downcase
+  	@song = Song.find(params[:song_id])
+  	@title = @song.title.downcase
+  	if @answer == @title
+  		@result = "You Win!"
+  	else
+  		@result = "You Lose!!!"
+  	end
   end
 
 end
