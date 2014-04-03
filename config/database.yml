@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: gif_of_music_development
   pool: 5
-  username: gif_of_music
+  username: tadashiokazaki
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: gif_of_music_test
   pool: 5
-  username: gif_of_music
+  username: tadashiokazaki
   password:
 
 production:
@@ -56,5 +56,4 @@ production:
   encoding: unicode
   database: gif_of_music_production
   pool: 5
-  username: gif_of_music
   password:
